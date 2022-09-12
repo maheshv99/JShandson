@@ -4,7 +4,7 @@
 
 function show(st){
     let n=new Set(st);
-    document.write(n);
+   console.log(n);
 }
 
 show("abcadeecfb");
@@ -27,5 +27,5 @@ function mp(st1){
 }
 mp("abcadeecfb");
 for(let k of m2){
-     document.write(k);
+     console.log(k);
 }
