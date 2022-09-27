@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<hr>
+    <p>1.We are interested in retrieving only the name of the students and all the names should be in caps.
+
+        ['JOHN', 'BABA', 'YAGA', 'WICK']"</p>
+        <pre> 
+               let name = studentRecords.name.toUpperCase();
+                 console.log(name)
+        </pre>
+        <hr> 
+    
+        <p>2.Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.</p>
+        <br>  
+        <pre>
+            for( let i=0; i< studentRecords.length; i++){
+                if(studentRecords[i].marks>50)
+                {
+                    document.write("Name:"+studentRecords[i].name + ","+" "+ "id:"+ studentRecords[i].id + " " + " <br>")
+                }
+            }
+            </pre> 
+            <hr>
+            <p>3.Retrieve the details of students who scored more than 50 marks and have id greater than 120.</p>
+                <pre>             
+                        for( let i=0; i < studentRecords.length; i++){
+                    if(studentRecords[i].marks>50 && studentRecords[i].id>120)
+                    {
+                        document.write("Name:"+studentRecords[i].name + ","+" "+ "id:"+ studentRecords[i].id + " " + " <br>")
+                    }
+                }
+            </pre> 
+            <hr>
+            <p>4.Question 4: Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.</p>
+            <pre>
+                let a = 0; 
+                for(let i in studentRecords){
+                    let b = studentRecords[i].marks
+                    a = a + b
+                }
+                console.log(a)
+            </pre>
+            <hr>
+            <p>5.This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.</p>
+            <pre>                  for(let i=0; i < studentRecords.length; i++){
+                if(studentRecords[i].marks>50){
+                    document.write("Name:"+studentRecords[i].name + " <br>")
+                }
+            }
+            </pre>
+            <hr>
+            <p>6.This time we are required to print the sum of marks of the students with id > 120.</p>
+            <pre> 
+                let sum = 0;
+                for(let i=0; i < studentRecords.length; i++){
+                    if(studentRecords[i].id>120)
+                    {
+                    
+                        sum  = sum+studentRecords[i].marks;
+                        
+                        document.write(sum + "<br>")
+                    }
+                }
+            </pre>
+            <hr>
+            <p>7.This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.</p>
+            <pre>let sum = 0; 
+                for(let i = 0;i<studentRecords.length;i++){
+                    if(studentRecords[i].marks>50){
+                        sum=sum+studentRecords[i].marks
+                        document.write(sum+"<br>")
+                    }
+                    else{
+                        let add = studentRecords[i].marks+15;
+                        document.write(add+"<br>")
+                    }
+                }
+                 </pre>
+            <hr>
+            <p>8.Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. </p>
+            <pre>              
+                let sixobjects = [
+                    {name : " P" , id : 1 , rollno: 06},
+                    {name : " PR" , id : 2 , rollno: 05},
+                    {name : " PRA" , id : 3 , rollno: 04},
+                    {name : " PRAM" , id : 4 , rollno: 03},
+                    {name : " PRAMO" , id : 5 , rollno: 02},
+                    {name : " PRAMOD" , id : 6 , rollno: 01}
+                
+                ]
+                console.log(sixobjects)
+                for(let i=0; i< sixobjects.length; i++)
+                document.write(" Name: " +sixobjects[i].name +" ," + " id: " + sixobjects [i] .id + " ," + " " + " Rollno :" + sixobjects[i].rollno +"< br>") 
+            </pre>
+            <script src="./index.js"></script>
+</body>
+</html>
