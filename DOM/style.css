@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-flow: row ;
+    justify-content: flex-start;
+}
+.item
+{
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    margin: 5px;
+
+}
+button{
+    font-size: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+    display: inline-block;
+    cursor: pointer;
+}
+#HH{
+    background-color: black;
+    color: white;
+    font-size: 35px;
+    border-radius: 10px;
+}
+#SS{
+    background-color: black;
+    color: white;
+    font-size: 35px;
+    border-radius: 10px;
+}
+#MM{
+    background-color: black;
+    color: white;
+    font-size: 35px;
+    border-radius: 10px;
+}
+#screen{color: red;}
+
+h1{color: blue;}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      option{
+        font-size: 20px;
+        width:10%;
+      }
+      select{
+        height:20px;
+        width:300px;
+      }.content{
+        margin-left:35%;
+        margin-top:20px;
+      }
+    </style>
+   
+</head>
+<body>
+    <p>1.Write the code to access element which is having id as "text"</p>
+    ans:
+    <pre>
+      let text = document.getElementById("text")
+    </pre>
+    <hr>
+    <p>2.Write the code to access element which is having tag as "h1"</p>
+    
+    <pre> 
+      let heading = document.getElementsByTagName("h1")[0] 
+    </pre>
+    <hr>
+    <p>3.Write the code to access element which is having class as "box"</p>
+    <pre>
+      let box = document.getElementsByClassName("box")[0]
+    </pre>
+    <hr>
+
+    <h3>Hello</h3>
+
+      Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</p>
+      
+    <pre>
+        let change = document.getElementById("change")
+        let a= change.innerText = "Hello World"
+        console.log(a) 
+    </pre>
+      <h1 id="text">Hello</h1>
+    <hr>
+    <p>5.Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</p>
+    
+    <div class="container">
+
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <button onclick="execute()">Change-Flex-direction</button>
+  <hr>
+    
+
+  <p>6.What the difference between window vs document?</p>
+  ans:
+  <p>window:</p>
+  <ul>
+    <li>Each browser tab has its own top-level window object</li>
+    <li>window.document or just document is the main object of the potentially visible</li>
+    <li>Each iframe (and deprecated) element has its own window object too, nested within a parent window.</li>
+    <li>Each of these windows gets its own separate global object. </li>
+    <li>window.window always refers to window, but window.parent and window.top</li>
+  </ul>
+ 
+<p>Document:</p>
+<ul>
+  <li>Each window object has a document object to be rendered</li>
+  <li>These objects get confused in part because HTML elements are added to the global object when assigned a unique</li>
+  <li>The document object represent a web page that is loaded in the browser. </li>
+  <li>we can add dynamic content to our web page.</li>
+  <li>The document object can be accessed with a window.document </li>
+</ul>
+<hr>
+<p>7.Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</p>
+
+<h1 id="heading" style="color: red;">Hello</h1>
+<hr>
+
+<p>8.Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</p>
+
+<p class="text", style="color: blue;">Hello World</p>
+<button onclick="fun()">Replace text</button>
+<hr>
+<p>9.Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</p>
+
+<span id="HH"></span>:
+<span id="MM"></span>:
+<span id="SS"></span>
+
+<script>
+  
+function getTime(){
+    let date = new Date();
+    let HH = date.getHours();
+    let MM = date.getMinutes();
+    let SS = date.getSeconds();
+    document.getElementById("HH").innerText = HH;
+    document.getElementById("MM").innerText = MM;
+    document.getElementById("SS").innerText = SS;
+    setTimeout(getTime, 1000);
+}
+getTime();
+</script>
+
+<hr>
+<p>10.Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected</p>
+
+
+      <label for="">Dropdown :</label>
+      <h1 id="iam">
+      <select id="screen" onclick="change()">
+        <option value="select">select</option>
+        <option value="2020-2021">2020-2021</option>
+        <option value="2021-2022">2021-2022</option>
+        <option value="2022-2023">2022-2023</option>
+          </select>
+        </h1>
+  
+
+
+      <script>
+       function change(){
+
+      let c = document.getElementById("screen").value;
+         
+          setTimeout(()=>{
+            let d = document.getElementById("iam")
+            d.innerText = document.getElementById("screen").value;
+            console.log(d)
+
+          },2000)
+    }
+  </script> 
+<hr>
+<p>11."Create a form having name ,email, phone no. , birth year 
+  Add validations - phone no. should start with 91 , it should be 10 digits
+  email should be domain prepbytes.com
+  birth year should be > 95"</p>  
+  <br>
+  <br>
+ 
+  <form action="" onsubmit="return(validate())">
+
+  <label for="name">Name : </label>
+  <input id="name" type="text" placeholder="Enter your name" required><br><br>
+  
+  <label for="email">Email :</label>
+  <input id="email" type="email" placeholder="Enter your email"><br><br>
+
+  <label for="phone">Phone No:</label>
+  <input id="phone" type="number" placeholder="Enter the phone number"required><br><br>
+
+  <label for="birthYear">Birth Year : </label>
+  <input id="birthYear" type="date" required><br><br>
+
+  <input type="submit" value="submit" onclick="validate()">
+  </form>
+<script src="./index.js"></script>
+  </body>
+</html>
