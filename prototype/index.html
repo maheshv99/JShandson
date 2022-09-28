@@ -9,14 +9,14 @@
 <body>
     <p>1.Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</p>
     <pre>let parent ={
-        name : "pramod",
+        name : "mahesh",
         age : 25,
-        place : "kadapa"
+        place : "karnataka"
     }
     let child = {
-        name : "ppramod",
+        name : "mallu",
         
-        place : "Tpt"
+        place : "KA"
         
     
     }
@@ -27,9 +27,9 @@
     <pre>
 
         function student(){
-            this.name = "kumar"
+            this.name = "mahi"
         }
-        student.prototype.name = "pramod"
+        student.prototype.name = "mahesh"
         student.prototype.age = 23
         
         let obj = new student()
@@ -67,7 +67,7 @@ this.name = name;
 }
 
 Student.prototype.age = true;
-console.log((new Student("pramod")));
+console.log((new Student("mahesh")));
     </pre>
     <hr>
     <script src="./index.js"></script>
