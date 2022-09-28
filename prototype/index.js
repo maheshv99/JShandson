@@ -1,12 +1,12 @@
 let parent ={
-    name : "pramod",
+    name : "mahesh",
     age : 25,
-    place : "kadapa"
+    place : "Karnataka"
 }
 let child = {
-    name : "ppramod",
+    name : "mallu",
     
-    place : "Tpt"
+    place : "KA"
     
 
 }
@@ -16,9 +16,9 @@ console.log(parent.__proto__)
 
 
 function student(){
-    this.name = "kumar"
+    this.name = "mahi"
 }
-student.prototype.name = "pramod"
+student.prototype.name = "mahesh"
 student.prototype.age = 23
 
 let obj = new student()
@@ -57,4 +57,4 @@ function Student(name) {
 }
 
 Student.prototype.age = true;
-console.log((new Student("pramod")));
+console.log((new Student("mahesh")));
